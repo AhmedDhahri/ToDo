@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add"
+    android:id="@+id/layout_add"
+    android:background="@drawable/anim_list">
+    <CalendarView
+        android:id="@+id/cld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:padding="20dp"
+        android:layout_below="@+id/cld">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="De :       "/>
+
+        <EditText
+            android:background="@color/backgground0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:layout_weight="0.2"
+            android:id="@+id/hourf"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"/>
+
+        <EditText
+            android:background="@color/backgground0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:layout_weight="0.2"
+            android:id="@+id/minf"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:padding="20dp"
+        android:layout_below="@+id/from">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A :           "/>
+
+        <EditText
+            android:background="@color/backgground0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:layout_weight="0.2"
+            android:id="@+id/hourt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"/>
+
+        <EditText
+            android:background="@color/backgground0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:layout_weight="0.2"
+            android:id="@+id/mint"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_below="@id/to">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom :     "/>
+        <EditText
+            android:background="@color/backgground0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:id="@+id/name"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:onClick="add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:id="@+id/wait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="#50ffffff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/layout"
+    android:background="@drawable/anim_list">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"
+        android:padding="10dp"
+        android:background="@drawable/main_backg"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:orientation="vertical"
+        android:background="@drawable/main_backg"
+        android:layout_margin="30dp"
+        android:alpha="0.6"
+        android:padding="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aujourd'hui"
+            android:layout_margin="10dp"
+            android:onClick="today"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter une tâche"
+            android:layout_margin="10dp"
+            android:onClick="add"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Liste des tâches"
+            android:layout_margin="10dp"
+            android:onClick="task"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
